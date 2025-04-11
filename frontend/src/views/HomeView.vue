@@ -16,7 +16,8 @@ import {
 import {
   CalendarIcon,
   WrenchIcon,
-  ChartBarIcon
+  ChartBarIcon,
+  HomeIcon
 } from "@heroicons/vue/24/outline"
 
 // Register Chart.js components
@@ -62,21 +63,14 @@ const chartOptions = {
     <!-- Header -->
     <header class="flex justify-between items-center mb-6">
       <h1 class="text-xl font-bold flex items-center space-x-2">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h11M9 21V3m12 7h-3m0 0l-3 3m3-3l3 3" />
-        </svg>
-        <span>Система управления освещением</span>
+        <HomeIcon class="size-7 text-blue-500" />
+        <span>Система управления грядкой</span>
       </h1>
       <button class="bg-gray-800 px-4 py-2 rounded-lg hover:bg-gray-700 flex items-center space-x-2">
         <WrenchIcon class="size-6 text-white" />
         <span>Термометры</span>
       </button>
     </header>
-
-    <!-- Subheader -->
-    <p class="text-gray-400 mb-4">
-      Мониторинг температуры и настройка расписания освещения
-    </p>
 
     <!-- Tabs -->
     <div class="flex space-x-4 mb-6">
