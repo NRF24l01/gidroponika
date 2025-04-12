@@ -1,3 +1,5 @@
 <template>
-  <p class="text-lg">Добро пожаловать!</p>
+  <div class="flex flex-col">
+    <p class="text-lg">Добро пожаловать!</p>
+  </div>
 </template>
