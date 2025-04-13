@@ -1,34 +1,31 @@
 <template>
-  <div class="flex items-center bg-gray-800 py-1 px-4 rounded-lg w-full mx-auto">
+  <div class="flex items-center bg-gray-800 py-1 px-4 rounded-lg w-full mx-2">
     <button
       :class="{
-        'bg-gray-700 text-white': selected === 'temperature',
-        'text-gray-400': selected !== 'temperature',
+        'bg-gray-700 text-white': $route.path === '/stats',
+        'text-gray-400': $route.path !== '/stats',
       }"
-      @click="selected = 'temperature'"
-      class="flex-1 py-2 px-4 rounded-lg focus:outline-none transition"
+      @click="$router.push('/stats')"
+      class="flex flex-1 justify-center py-2 px-4 rounded-lg focus:outline-none transitio items-center"
     >
-      <span class="mr-2">🌡️</span>Температура
+      <ChartPieIcon class="size-6 mr-1" /> Температура
     </button>
     <button
       :class="{
-        'bg-gray-700 text-white': selected === 'schedule',
-        'text-gray-400': selected !== 'schedule',
+        'bg-gray-700 text-white': $route.path === '/shedule',
+        'text-gray-400': $route.path !== '/shedule',
       }"
-      @click="selected = 'schedule'"
-      class="flex-1 py-2 px-4 rounded-lg focus:outline-none transition"
+      @click="$router.push('/shedule')"
+      class="flex flex-1 justify-center py-2 px-4 rounded-lg focus:outline-none transition items-center"
     >
-      <span class="mr-2">📅</span>Расписание
+      <CalendarIcon class="size-6 mr-1" />Расписание
     </button>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      selected: "temperature",
-    };
-  },
-};
+<script setup>
+import {
+  CalendarIcon,
+  ChartPieIcon
+} from "@heroicons/vue/24/outline"
 </script>
