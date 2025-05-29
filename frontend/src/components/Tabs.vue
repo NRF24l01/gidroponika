@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center bg-gray-800 py-1 px-4 rounded-lg w-full mx-2">
+  <div class="flex items-center bg-gray-800 rounded-lg mx-2">
     <button
       :class="{
         'bg-gray-700 text-white': $route.path === '/stats',

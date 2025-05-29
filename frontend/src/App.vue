@@ -12,7 +12,7 @@ import Footer from "@/components/Footer.vue"
     <Tabs />
     
     <!-- Контент заполняет доступное пространство -->
-    <main class="flex-grow p-6">
+    <main class="flex-grow px-4 py-6">
       <section class="grid gap-6">
         <RouterView />
       </section>
