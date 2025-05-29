@@ -43,7 +43,18 @@ const mergedOptions = computed(() => ({
   },
   stroke: { curve: 'smooth', width: 3 },
   markers: { size: 4 },
-  xaxis: { categories: filteredCategories.value },
+  xaxis: { 
+    categories: filteredCategories.value,
+    labels: { style: { colors: '#FFFFFF' } } // Set x-axis labels to white
+  },
+  yaxis: { 
+    labels: { style: { colors: '#FFFFFF' } } // Set y-axis labels to white
+  },
+  legend: {
+    labels: { colors: '#FFFFFF' }, // Set legend text color to white
+    fontSize: '12px', // Optional: Adjust font size if needed
+    fontFamily: 'Helvetica, Arial, sans-serif' // Optional: Ensure consistent font
+  },
   colors: props.series.map(s => s.color || '#8884d8'),
   tooltip: {
     theme: 'dark',
@@ -73,6 +84,7 @@ const mergedOptions = computed(() => ({
       type="line"
       :options="mergedOptions"
       :series="filteredSeries"
+      class="text-white"
     />
   </div>
 </template>
