@@ -65,19 +65,7 @@ const mergedOptions = computed(() => ({
 </script>
 
 <template>
-  <div class="w-full bg-gray-800 rou">
-    <div class="flex gap-2 mb-4" v-if="presets.length">
-      <button
-        v-for="preset in presets"
-        :key="preset"
-        @click="timeRange = preset"
-        class="px-3 py-1 rounded-lg border"
-        :class="preset === timeRange ? 'bg-blue-600 text-white' : 'bg-white text-black'"
-      >
-        {{ preset }}
-      </button>
-    </div>
-
+  <div class="w-full bg-gray-800 rou rounded-xl px-1">
     <apexchart
       width="100%"
       height="300"
