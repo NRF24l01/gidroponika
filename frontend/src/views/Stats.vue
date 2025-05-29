@@ -1,17 +1,5 @@
 <template>
-  <!-- Graph 1 -->
-  <div class="bg-gray-800 p-4 rounded-lg">
-    <div class="flex justify-between items-center mb-4">
-      <h2 class="text-lg font-semibold">24h</h2>
-      <button class="bg-gray-700 px-3 py-1 rounded-lg hover:bg-gray-600">
-        Свой диапазон
-      </button>
-    </div>
-    <Line :data="waterChartData" :options="chartOptions" class="h-48" />
-    <p class="text-center text-gray-400 mt-2">Вода °C</p>
-  </div>
-
-  <!-- Graph 2 -->
+  <!-- Main plot -->
   <Plot
     :series="series"
     :categories="categories"
