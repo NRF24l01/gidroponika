@@ -1,11 +1,15 @@
 <template>
-  <!-- Main plot -->
-  <Plot
-    :series="series"
-    :categories="categories"
-    :baseOptions="baseOptions"
-    :presets="['24h', '12h', '6h']"
-  />
+  <div class="flex justify-center">
+    <div class="w-full max-w-3xl">
+      <h1 class="text-4xl font-bold mb-12 justify-center flex">Статистика</h1>
+      <Plot
+        :series="series"
+        :categories="categories"
+        :baseOptions="baseOptions"
+        :presets="['24h', '12h', '6h']"
+      />
+    </div>
+  </div>
 </template>
 
 <script setup>

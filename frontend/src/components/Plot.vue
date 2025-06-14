@@ -45,13 +45,13 @@ const mergedOptions = computed(() => ({
   markers: { size: 4 },
   xaxis: { 
     categories: filteredCategories.value,
-    labels: { style: { colors: '#FFFFFF' } } // Set x-axis labels to white
+    labels: { style: { colors: '#000000' } } // Set x-axis labels to white
   },
   yaxis: { 
-    labels: { style: { colors: '#FFFFFF' } } // Set y-axis labels to white
+    labels: { style: { colors: '#000000' } } // Set y-axis labels to white
   },
   legend: {
-    labels: { colors: '#FFFFFF' }, // Set legend text color to white
+    labels: { colors: '#000000' }, // Set legend text color to white
     fontSize: '12px', // Optional: Adjust font size if needed
     fontFamily: 'Helvetica, Arial, sans-serif' // Optional: Ensure consistent font
   },
@@ -65,14 +65,15 @@ const mergedOptions = computed(() => ({
 </script>
 
 <template>
-  <div class="w-full bg-gray-800 rou rounded-xl px-1">
+  <div class="w-full bg-white rounded-xl px-1 border border-gray-300 shadow-sm">
     <apexchart
       width="100%"
-      height="300"
+      height="auto"
       type="line"
       :options="mergedOptions"
       :series="filteredSeries"
-      class="text-white"
+      class="text-gray-800"
+      style="min-height: 300px; height: auto; max-height: 300px;"
     />
   </div>
 </template>
