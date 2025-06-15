@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-center">
-    <div class="w-full max-w-3xl">
+    <div class="w-full max-w-5xl">
       <h1 class="text-4xl font-bold mb-12 justify-center flex">Статистика</h1>
       <Plot
         :series="series"
